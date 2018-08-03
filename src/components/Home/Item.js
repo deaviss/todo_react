@@ -8,7 +8,7 @@ export default observer(({item}) => (
     <span style={{textDecoration: `${item.is_done ? "line-through" : ""}`} }>
       {item.name}
       
-      <div className="about-items">
+      <div className="about-items"> 
         <i style={{float: "right"}}>
           Dodano: {item.id}
         </i>
