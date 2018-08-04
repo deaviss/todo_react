@@ -10,7 +10,7 @@ export default observer(class ViewTodos extends Component {
     const {todo} = this.props;
     return (
       <div className="list">
-        <h1 class="header"> To do. </h1>
+        <h1 className="header"> To do. </h1>
 
         <ul className="items">
           {todo.todoList.todos.map((item, i) =>(
