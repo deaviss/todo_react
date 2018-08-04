@@ -6,7 +6,10 @@ const ToDoList = types.model("ToDoList", {
   todos: types.array(Item)
 }).actions(self => ({
   loadFromStorage(){
-    const stor = JSON.parse(localStorage.getItem("todos"));
+    let stor = JSON.parse(localStorage.getItem("todos"));
+    if(!stor){
+      stor = [];
+    }
     self.todos = [];
     stor.map((itm, i) => (
       self.todos.push(itm)
